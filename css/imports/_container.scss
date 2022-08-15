@@ -1,0 +1,72 @@
+.container {
+    display: $myDisplay;
+    justify-content: $myJustifyContent;
+    align-items: $myAlignItems;
+    flex-direction: column;
+    & a {
+        position: relative;
+        width: 180px;
+        height: 80px;
+        display: block;
+        background: $newBackground;
+        margin: 25px;
+        &:before {
+            content: $newContent;
+            position: $newPosition;
+            inset: $myInset;
+            background: #f00;
+            transition: 0.5s;
+        }
+        &:after {
+            content: $newContent;
+            position: $newPosition;
+            inset: $myInset;
+            background: #f00;
+            transition: 0.5s;
+        }
+        &:nth-child(1):before, 
+        &:nth-child(1):after {
+            background: linear-gradient(45deg, #00ccff, $myBackground, $myBackground, #d400d4);
+        }
+        &:nth-child(2):before, 
+        &:nth-child(2):after {
+            background: linear-gradient(45deg, #ff075b, $myBackground, $myBackground, #1aff22);
+        }
+        &:hover:before {
+            inset: $newInset;
+        }
+        &:hover:after{
+            inset: $newInset;
+            filter: blur(10px);
+        }
+    }
+    & a span {
+        position: $newPosition;
+        top: $myTop;
+        left: 0;
+        width: $myWidth;
+        height: $myHeight;
+        display: inline-block;
+        background: $myBackground;
+        z-index: 10;
+        display: $myDisplay;
+        justify-content: $myJustifyContent;
+        align-items: $myAlignItems;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $newBackground;
+        border: 2px solid #040a29;
+        overflow: hidden;
+        &::before {
+            content: $newContent;
+            position: $newPosition;
+            top: $myTop;
+            left: -50%;
+            width: $myWidth;
+            height: $myHeight;
+            background: rgba(255,255,255,0.075);
+            transform: skew(25deg);
+        }
+    }
+}

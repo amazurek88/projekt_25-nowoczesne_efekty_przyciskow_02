@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bitter:wght@100;200;300;400;500;600&family=Lobster&display=swap');
+
+$newMargin: 0;
+$newPadding: 0;
+$newFont: 'Aboreto', sans-serif;
+$myDisplay: flex;
+$myJustifyContent: center;
+$myAlignItems: center;
+$myBackground: #0e1538;
+$newBackground: #fff;
+$newContent: '';
+$newPosition: absolute;
+$myInset: 0;
+$newInset: -3px;
+$myTop: 0;
+$myWidth: 100%;
+$myHeight: 100%;
+
+* {
+    margin: $newMargin;
+    padding: $newPadding;
+    box-sizing: border-box;
+    font-family: $newFont;
+}
+
+body {
+    display: $myDisplay;
+    justify-content: $myJustifyContent;
+    align-items: $myAlignItems;
+    min-height: 100vh;
+    background: $myBackground;
+}
+
+@import 'imports/container';
